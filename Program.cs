@@ -48,11 +48,16 @@ Console.WriteLine("Input number");
 int n = Convert.ToInt32(Console.ReadLine());
 int current = 2;
 
-
+if(n>1)
+{
 while(current < n )
 {
     if(current %2 == 0)
 Console.Write(current + " ");
 current++;
-
+}
+}
+else 
+{
+  Console.WriteLine("The number is not even");  
 }
