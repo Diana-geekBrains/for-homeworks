@@ -43,21 +43,71 @@
 // {
 // Console.WriteLine("The number is not even");
 // }
-//Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-Console.WriteLine("Input number");
-int n = Convert.ToInt32(Console.ReadLine());
-int current = 2;
+// //Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+// Console.WriteLine("Input number");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int current = 2;
 
-if(n>1)
-{
-while(current < n )
-{
-    if(current %2 == 0)
-Console.Write(current + " ");
-current++;
-}
-}
-else 
-{
-  Console.WriteLine("The number is not even");  
-}
+// if(n>1)
+// {
+// while(current < n )
+// {
+//     if(current %2 == 0)
+// Console.Write(current + " ");
+// current++;
+// }
+// }
+// else 
+// {
+//   Console.WriteLine("The number is not even");  
+// }
+
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// int SecondNumber(int num)
+// {
+//   int ed = num / 10;
+//   int sot = num / 100;
+//   return ed - sot * 10;
+// }
+
+// int randomnum = new Random().Next(100, 1000);
+// int res = SecondNumber(randomnum);
+// Console.WriteLine($"The second digit of {randomnum} is {res}");
+
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// int ThirdNumber(int num)
+// {
+//    while(num > 999)  
+//    {
+//     num = num / 10;
+//    }
+//    return num % 10;
+   
+//  }
+
+//  int randomnum = new Random().Next(1, 999999);
+ 
+// int res = ThirdNumber(randomnum);
+//  Console.WriteLine($"The third digit of {randomnum} is {res}");
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+//  string dayOff(int num)
+//  {
+//   if(num <= 5)
+//   {
+//     return ("There is not day off. Work!!!");
+//   }
+//   return ("Yes, this is the day off. Enjoy while you can..");
+//  } 
+
+//  int randomnum = new Random().Next(1, 8);
+//  string res = Convert.ToString(dayOff(randomnum));
+// Console.WriteLine(res);
+
+Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+14212 -> нет
+
+12821 -> да
+
+23432 -> да
