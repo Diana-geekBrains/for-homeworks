@@ -129,7 +129,7 @@
 //  Console.WriteLine($"Number {num} is palindrome -> {Palindrome(num)}");
 
 
-//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+//Напишите программу, которая принимает на вход координаты трех точек и находит расстояние между ними в 3D пространстве.
 
 // double FindDistance(double x1, double y1, double x2, double y2, double z1, double z2)
 // {
