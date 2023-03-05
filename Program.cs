@@ -104,10 +104,68 @@
 //  string res = Convert.ToString(dayOff(randomnum));
 // Console.WriteLine(res);
 
-Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+//Задача19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-14212 -> нет
 
-12821 -> да
+//  bool Palindrome(int num)
+//  {
+//  int number = num;
+//  int reverse = 0;
+//  while(num > 0)
+//   {
+//  int digit = num % 10;
+//  reverse = reverse * 10 + digit;
+//  num = num / 10;
+//   }
+//   if(number == reverse)
+//   {
+//   return true;
+//   }
+// return false;
+//  }
+//  Console.WriteLine("Input number");
+//  int num = Convert.ToInt32(Console.ReadLine());
+//  Palindrome(num);
+//  Console.WriteLine($"Number {num} is palindrome -> {Palindrome(num)}");
 
-23432 -> да
+
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// double FindDistance(double x1, double y1, double x2, double y2, double z1, double z2)
+// {
+//     return Math.Round(Math.Sqrt(Math.Pow(x2-x1, 2) + Math.Pow(y2-y1, 2) + Math.Pow(z2-z1, 2)), 2);
+// }
+
+// Console.WriteLine("Input coordinate X of A point: ");
+// double x1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input coordinate Y of A point: ");
+// double y1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input coordinate Z of A point: ");
+// double z1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input coordinate X of B point: ");
+// double x2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input coordinate Y of B point: ");
+// double y2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Input coordinate Z of B point: ");
+// double z2 = Convert.ToDouble(Console.ReadLine());
+
+
+// double distance = FindDistance(x1, y1, z1, x2, y2, z2);
+// Console.WriteLine($"Distance between A and B is {distance}");
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+void FindQ(int n)
+ {
+     int i = 0;
+     int res = 0;
+     while (i < n)
+     {
+         i++;
+         res = i*i*i;
+         Console.WriteLine($"{i} -> {res}");
+     }
+ }
+ Console.WriteLine("Input N:");
+ int n = Convert.ToInt32(Console.ReadLine());
+ FindQ(n);
