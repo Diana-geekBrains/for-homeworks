@@ -155,17 +155,28 @@
 
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-void FindQ(int n)
- {
-     int i = 0;
-     int res = 0;
-     while (i < n)
-     {
-         i++;
-         res = i*i*i;
-         Console.WriteLine($"{i} -> {res}");
-     }
- }
- Console.WriteLine("Input N:");
- int n = Convert.ToInt32(Console.ReadLine());
- FindQ(n);
+// void FindQ(int n)
+//  {
+//      int i = 0;
+//      int res = 0;
+//      while (i < n)
+//      {
+//          i++;
+//          res = i*i*i;
+//          Console.WriteLine($"{i} -> {res}");
+//      }
+//  }
+//  Console.WriteLine("Input N:");
+//  int n = Convert.ToInt32(Console.ReadLine());
+//  FindQ(n);
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+int NatStep(int num A, int num B )
+{
+
+}
