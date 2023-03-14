@@ -252,3 +252,52 @@
 //  Console.WriteLine ("Input maximal value of array element:");
 //  int maxValue = Convert.ToInt32(Console.ReadLine());
 //  ShowArray(CreateRandomArray(size, minValue, maxValue));
+
+//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+//[345, 897, 568, 234] -> 2
+
+int[] CreateRandomArray (int size, int minValue, int maxValue)
+  {
+      int[] newArray = new int[size];
+      for(int i = 0; i < size; i++)
+      {
+          newArray[i] = new Random().Next(minValue, maxValue+1);
+      }
+      return newArray;
+  }
+  void ShowArray (int[] array)
+  {
+    Console.Write("[");
+      for(int i = 0; i < array.Length; i++)
+      {
+        
+          Console.Write (array[i] + " ");
+          
+      }
+      Console.Write("]");
+      Console.WriteLine ();
+      
+  }
+void Sum (int[] array)
+{
+    int sum = 0;   
+    
+    for(int i = 0; i < array.Length; i++)
+    {
+       int ostatok = array[i] % 2;  
+        if(ostatok == 0) sum = sum +1;
+        
+    }
+    Console.WriteLine ($"Четных чисел в этом массиве {sum}");
+
+}
+Console.WriteLine ("Input array size:");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("Input minimal value of array element:");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("Input maximal value of array element:");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+int[] myArry = (CreateRandomArray(size, minValue, maxValue));
+ShowArray(myArry);
+Sum(myArry);
