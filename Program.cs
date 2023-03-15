@@ -353,17 +353,17 @@
 
 // [3 7 22 2 78] -> 76
 
-double[] CreateRandomArray (int size, int minValue, int maxValue)
+int[] CreateRandomArray (int size, int minValue, int maxValue)
  {
         int[] newArray = new int[size];
     
         for(int i = 0; i < size; i++)
         {
-            newArray[i] = new Random().Next(minValue, maxValue+1) / 100 ;    
+            newArray[i] = new Random().Next(minValue, maxValue+1);    
            
         }
     
-        return Convert.ToDouble(newArray);
+        return newArray;
     }
     void ShowArray (int[] array)
     {
@@ -380,14 +380,14 @@ double[] CreateRandomArray (int size, int minValue, int maxValue)
 
     {
         int Max = 0;
-        int Min = minValue;
-        int res = Max - Min;
+        int Min = minValue; // не всегда попадется минимальное число массива, а если поставить 0, то не всегда будет неньше 0 , если в массив 0 не попадет
+        
       for(int i = 0; i < array.Length; i++)   
       {
         if(Max < array[i]) Max= array[i];
         if(Min > array[i]) Min = array[i];
       }
-    
+    int res = Max - Min;
           Console.WriteLine($"Разница между максимальным числом {Max} и минимальным {Min} -> {res}");
     }
 Console.WriteLine ("Input array size:");
