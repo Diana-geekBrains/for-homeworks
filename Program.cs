@@ -353,19 +353,19 @@
 
 // [3 7 22 2 78] -> 76
 
-int[] CreateRandomArray (int size, int minValue, int maxValue)
+double[] CreateRandomArray (int size, double minValue, double maxValue)
  {
-        int[] newArray = new int[size];
+        double[] newArray = new double[size];
     
         for(int i = 0; i < size; i++)
         {
-            newArray[i] = new Random().Next(minValue, maxValue+1);    
+            newArray[i] = new Random().NextDouble;    
            
         }
     
         return newArray;
     }
-    void ShowArray (int[] array)
+    void ShowArray (double[] array)
     {
       Console.Write("[");
         for(int i = 0; i < array.Length; i++)
@@ -376,17 +376,17 @@ int[] CreateRandomArray (int size, int minValue, int maxValue)
        Console.WriteLine ();   
     }
 
-    void Dif(int[] array)
+    void Dif(double[] array)
 
     {
-        int Max = array[0];
-        int Min = array[0]; 
+        double Max = array[0];
+        double Min = array[0]; 
       for(int i = 0; i < array.Length; i++)   
       {
         if(Max < array[i]) Max= array[i];
         if(Min > array[i]) Min = array[i];
       }
-    int res = Max - Min;
+    double res = Max - Min;
           Console.WriteLine($"Разница между максимальным числом {Max} и минимальным {Min} -> {res}");
     }
 Console.WriteLine ("Input array size:");
@@ -395,7 +395,7 @@ Console.WriteLine ("Input array size:");
   int minValue = Convert.ToInt32(Console.ReadLine());
   Console.WriteLine ("Input maximal value of array element:");
   int maxValue = Convert.ToInt32(Console.ReadLine());
-  int[] myArry = (CreateRandomArray(size, minValue, maxValue));
+  double[] myArry = (CreateRandomArray(size, minValue, maxValue));
   ShowArray(myArry);
   Dif(myArry);
 
