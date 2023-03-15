@@ -353,13 +353,13 @@
 
 // [3 7 22 2 78] -> 76
 
-double[] CreateRandomArray (int size, double minValue, double maxValue)
+double[] CreateRandomArray (int size)
  {
         double[] newArray = new double[size];
     
         for(int i = 0; i < size; i++)
         {
-            newArray[i] = new Random().Next(minValue, maxValue);    
+            newArray[i] = new Random().Next(0, 100) / 10.0;    
            
         }
     
@@ -395,7 +395,7 @@ Console.WriteLine ("Input array size:");
   int minValue = Convert.ToInt32(Console.ReadLine());
   Console.WriteLine ("Input maximal value of array element:");
   int maxValue = Convert.ToInt32(Console.ReadLine());
-  double[] myArry = (CreateRandomArray(size, minValue, maxValue));
+  double[] myArry = (CreateRandomArray(size));
   ShowArray(myArry);
   Dif(myArry);
 
