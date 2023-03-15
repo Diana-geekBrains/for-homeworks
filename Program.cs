@@ -359,7 +359,7 @@ double[] CreateRandomArray (int size, double minValue, double maxValue)
     
         for(int i = 0; i < size; i++)
         {
-            newArray[i] = new Random().NextDouble;    
+            newArray[i] = new Random().Next(minValue, maxValue);    
            
         }
     
