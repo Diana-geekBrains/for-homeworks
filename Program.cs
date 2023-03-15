@@ -391,10 +391,7 @@ double[] CreateRandomArray (int size)
     }
 Console.WriteLine ("Input array size:");
  int size = Convert.ToInt32(Console.ReadLine());
-  Console.WriteLine ("Input minimal value of array element:");
-  int minValue = Convert.ToInt32(Console.ReadLine());
-  Console.WriteLine ("Input maximal value of array element:");
-  int maxValue = Convert.ToInt32(Console.ReadLine());
+  
   double[] myArry = (CreateRandomArray(size));
   ShowArray(myArry);
   Dif(myArry);
