@@ -379,9 +379,8 @@ int[] CreateRandomArray (int size, int minValue, int maxValue)
     void Dif(int[] array, int minValue)
 
     {
-        int Max = 0;
-        int Min = minValue; // не всегда попадется минимальное число массива, а если поставить 0, то не всегда будет неньше 0 , если в массив 0 не попадет
-        
+        int Max = array[0];
+        int Min = array[0]; 
       for(int i = 0; i < array.Length; i++)   
       {
         if(Max < array[i]) Max= array[i];
