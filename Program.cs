@@ -376,7 +376,7 @@ int[] CreateRandomArray (int size, int minValue, int maxValue)
        Console.WriteLine ();   
     }
 
-    void Dif(int[] array, int minValue)
+    void Dif(int[] array)
 
     {
         int Max = array[0];
@@ -397,5 +397,5 @@ Console.WriteLine ("Input array size:");
   int maxValue = Convert.ToInt32(Console.ReadLine());
   int[] myArry = (CreateRandomArray(size, minValue, maxValue));
   ShowArray(myArry);
-  Dif(myArry, minValue);
+  Dif(myArry);
 
