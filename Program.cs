@@ -359,7 +359,7 @@ double[] CreateRandomArray (int size)
     
         for(int i = 0; i < size; i++)
         {
-            newArray[i] = new Random().Next(0, 100) / 10.0;    
+            newArray[i] = Math.Round (new Random().Next(0, 100) + new Random().NextDouble);    
            
         }
     
