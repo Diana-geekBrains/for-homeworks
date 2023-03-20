@@ -353,46 +353,100 @@
 
 // [3 7 22 2 78] -> 76
 
-double[] CreateRandomArray (int size)
- {
-        double[] newArray = new double[size];
+// double[] CreateRandomArray (int size)
+//  {
+//         double[] newArray = new double[size];
     
-        for(int i = 0; i < size; i++)
-        {
-            newArray[i] = Math.Round (new Random().Next(0, 100) + new Random().NextDouble);    
+//         for(int i = 0; i < size; i++)
+//         {
+//             newArray[i] = Math.Round (new Random().Next(0, 100) + new Random().NextDouble(),4);    
            
-        }
+//         }
     
-        return newArray;
-    }
-    void ShowArray (double[] array)
-    {
-      Console.Write("[");
-        for(int i = 0; i < array.Length; i++)
-        {      
-            Console.Write (array[i] + " ");
-        }
-       Console.Write("]");
-       Console.WriteLine ();   
-    }
+//         return newArray;
+//     }
+//     void ShowArray (double[] array)
+//     {
+//       Console.Write("[");
+//         for(int i = 0; i < array.Length; i++)
+//         {      
+//             Console.Write (array[i] + " ");
+//         }
+//        Console.Write("]");
+//        Console.WriteLine ();   
+//     }
 
-    void Dif(double[] array)
+//     void Dif(double[] array)
 
-    {
-        double Max = array[0];
-        double Min = array[0]; 
-      for(int i = 0; i < array.Length; i++)   
-      {
-        if(Max < array[i]) Max= array[i];
-        if(Min > array[i]) Min = array[i];
-      }
-    double res = Max - Min;
-          Console.WriteLine($"Разница между максимальным числом {Max} и минимальным {Min} -> {res}");
-    }
-Console.WriteLine ("Input array size:");
- int size = Convert.ToInt32(Console.ReadLine());
+//     {
+//         double Max = array[0];
+//         double Min = array[0]; 
+//       for(int i = 0; i < array.Length; i++)   
+//       {
+//         if(Max < array[i]) Max= array[i];
+//         if(Min > array[i]) Min = array[i];
+//       }
+//     double res = Max - Min;
+//           Console.WriteLine($"Разница между максимальным числом {Max} и минимальным {Min} -> {res}");
+//     }
+// Console.WriteLine ("Input array size:");
+//  int size = Convert.ToInt32(Console.ReadLine());
   
-  double[] myArry = (CreateRandomArray(size));
-  ShowArray(myArry);
-  Dif(myArry);
+//   double[] myArry = (CreateRandomArray(size));
+//   ShowArray(myArry);
+//   Dif(myArry);
+
+// 6 семинар
+
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+//0, 7, 8, -2, -2 -> 2
+
+//1, -7, 567, 89, 223-> 3
+
+// void Sum(int[] arry)
+// {  
+//   int sum1 = 0;
+//   for(int i = 0; i < arry.Length; i++ )
+//   {
+//   if (arry[i] > 0) 
+  
+//   sum1 = sum1 + 1;
+//   }
+//   Console.WriteLine($"Sum is {sum1}");
+// }
+// Console.Write ("Input size");
+// int elementsCount = Convert.ToInt32(Console.ReadLine()); 
+// int[] arry = new int[elementsCount];
+// for (int i = 0; i < arry.Length; i++)
+// {
+//   Console.WriteLine($"Введите элемент массива под индексом {i}");
+//   arry[i]= Convert.ToInt32(Console.ReadLine());
+//   Sum(arry);
+// }
+
+//Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+//b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+
+// Console.WriteLine ("Input b1:");
+// double b1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine ("Input k1:");
+// double k1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine ("Input b2:");
+// double b2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine ("Input k2:");
+// double k2 = Convert.ToDouble(Console.ReadLine());
+
+// double x = (-b2 + b1)/(-k1 + k2);
+// double y = k2 * x + b2;
+
+// Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
+
+
+
+  
+
+
 
