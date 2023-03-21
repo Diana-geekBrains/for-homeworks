@@ -445,8 +445,154 @@
 // Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
 
 
+  // семинар 7
 
-  
+  //  Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+//m = 3, n = 4.
+
+//0,5 7 -2 -0,2
+
+//1 -3,3 8 -9,9
+
+//8 7,8 -7,1 9
+
+// double[,] Create2DRandomArray (int rows, int columns)
+//  {
+//      double[,] myArray = new double[rows, columns];
+//      for(int i = 0; i< rows; i++)
+//      {
+//          for(int j=0; j< columns; j++)
+//          {
+//              myArray[i,j] = Convert.ToDouble(new Random().Next(-1000, 1000)/10.0);
+//          }
+//      } return myArray;
+//  }
+
+//  void Show2DArray (double[,] array)
+//  {
+//  for(int i = 0; i < array.GetLength(0);i++)
+//  {
+//  for(int j = 0; j < array.GetLength(1);j++)
+//  {
+//  Console.Write(array[i,j] + " ");
+//  }
+//  Console.WriteLine();
+//  }
+//  Console.WriteLine();
+//  }
+
+//  Console.Write("Введите количество строк ");
+//  int rows = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите количество столбцов ");
+//  int columns = Convert.ToInt32(Console.ReadLine());
+ 
+// Show2DArray(Create2DRandomArray(columns, rows));
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+// Например, задан массив:
+
+// 1 4 7 2
+
+// 5 9 2 3
+
+// 8 4 2 4
+
+// 17 -> такого числа в массиве нет
 
 
+     int[,] Create2DRandomArray (int rows, int columns, int maxValue, int minValue)
+ {
+     int[,] myArray = new int[rows, columns];
+     for(int i = 0; i< rows; i++)
+     {
+         for(int j=0; j< columns; j++)
+         {
+             myArray[i,j] = new Random().Next(minValue, maxValue+1);
+         }
+     } return myArray;
+ }
 
+ 
+
+ void Show2DArray (int[,] array)
+ {
+ for(int i = 0; i < array.GetLength(0);i++)
+ {
+ for(int j = 0; j < array.GetLength(1);j++)
+ {
+ Console.Write(array[i,j] + " ");
+ }
+ Console.WriteLine();
+ }
+ Console.WriteLine();
+ }
+
+// void ShowElement (int [,] array, int Xcolumn, int Yrow)
+// {
+//   if(Xcolumn > array.GetLength(0)-1 || Yrow> array.GetLength(1)-1) Console.WriteLine("Такой позиции нет");
+//   for(int i = 0; i < array.GetLength(0);i++)
+//   {
+//    for(int j = 0; j < array.GetLength(1);j++)
+//    {
+//      if(i == Yrow  && j == Xcolumn ) Console.WriteLine($"число в позиции {Xcolumn}, {Yrow} ->{array[Xcolumn,Yrow]}");
+//      if(i > array.GetLength(0) || j> array.GetLength(1)) Console.WriteLine("Такой позиции нет");
+//    }
+   
+//   } 
+// }
+
+// Console.Write("Введите количество строк ");
+//  int rows = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите количество столбцов ");
+//  int columns = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите минимальное значение ");
+//  int minValue = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите максимальное значение ");
+//  int maxValue = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите позицию строки ");
+//  int Хrows = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите позицию колонки ");
+//  int Ycolumns = Convert.ToInt32(Console.ReadLine());
+
+
+//  int[,] MyArray= Create2DRandomArray(columns, rows, maxValue, minValue);
+//  Show2DArray(MyArray);
+//  ShowElement(MyArray, Хrows, Ycolumns);
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+//Например, задан массив:
+//1 4 7 2
+//5 9 2 3
+//8 4 2 4
+//Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+void average(int [,] array, int columns )
+{
+  for(int j = 0; j< array.GetLength(1); j++)
+   {
+    string result = string.Empty;
+    double sum = 0;
+      for(int i=0; i< array.GetLength(0); i++) 
+      {
+        sum = sum + array[i,j];
+      }
+      sum = Math.Round(sum / columns, 2);
+       Console.Write(sum + "; ");
+   }
+
+}
+Console.Write("Введите количество строк ");
+ int rows = Convert.ToInt32(Console.ReadLine());
+ Console.Write("Введите количество столбцов ");
+ int columns = Convert.ToInt32(Console.ReadLine());
+ Console.Write("Введите минимальное значение ");
+ int minValue = Convert.ToInt32(Console.ReadLine());
+ Console.Write("Введите максимальное значение ");
+ int maxValue = Convert.ToInt32(Console.ReadLine());
+ 
+ int[,] MyArray= Create2DRandomArray(columns, rows, maxValue, minValue);
+ Show2DArray(MyArray);
+ average(MyArray, columns);
