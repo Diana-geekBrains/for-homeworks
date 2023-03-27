@@ -569,30 +569,78 @@
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-void average(int [,] array, int columns )
-{
-  for(int j = 0; j< array.GetLength(1); j++)
-   {
-    string result = string.Empty;
-    double sum = 0;
-      for(int i=0; i< array.GetLength(0); i++) 
-      {
-        sum = sum + array[i,j];
-      }
-      sum = Math.Round(sum / columns, 2);
-       Console.Write(sum + "; ");
-   }
+// void average(int [,] array, int columns )
+// {
+//   for(int j = 0; j< array.GetLength(1); j++)
+//    {
+//     string result = string.Empty;
+//     double sum = 0;
+//       for(int i=0; i< array.GetLength(0); i++) 
+//       {
+//         sum = sum + array[i,j];
+//       }
+//       sum = Math.Round(sum / columns, 2);
+//        Console.Write(sum + "; ");
+//    }
 
-}
-Console.Write("Введите количество строк ");
- int rows = Convert.ToInt32(Console.ReadLine());
- Console.Write("Введите количество столбцов ");
- int columns = Convert.ToInt32(Console.ReadLine());
- Console.Write("Введите минимальное значение ");
- int minValue = Convert.ToInt32(Console.ReadLine());
- Console.Write("Введите максимальное значение ");
- int maxValue = Convert.ToInt32(Console.ReadLine());
+// }
+// Console.Write("Введите количество строк ");
+//  int rows = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите количество столбцов ");
+//  int columns = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите минимальное значение ");
+//  int minValue = Convert.ToInt32(Console.ReadLine());
+//  Console.Write("Введите максимальное значение ");
+//  int maxValue = Convert.ToInt32(Console.ReadLine());
  
- int[,] MyArray= Create2DRandomArray(columns, rows, maxValue, minValue);
- Show2DArray(MyArray);
- average(MyArray, columns);
+//  int[,] MyArray= Create2DRandomArray(columns, rows, maxValue, minValue);
+//  Show2DArray(MyArray);
+//  average(MyArray, columns);
+
+// семинар 8
+
+// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+//Например, задан массив:
+//1 4 7 2
+//5 9 2 3
+//8 4 2 4
+//В итоге получается вот такой массив:
+//7 4 2 1
+//9 5 3 2
+//8 4 4 2
+
+int[,] SortedArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1) - 1; j++)
+        {
+            for (int L = j + 1; L < array.GetLength(1); L++)
+            {
+                if (array[i, j] < array[i, L])
+                {
+                    int temp = array[i, j];
+                    array[i, j] = array[i, L];
+                    array[i, L] = temp;
+                }
+            }
+        }
+    }
+    return array;
+}
+Console.Write("введи количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("введи количество столбцов: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("введи минимальное значение: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("введи максимальное значение: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+int[,] myArray = Create2DRandomArray(rows, columns, minValue, maxValue);
+
+Show2DArray(myArray);
+
+myArray = SortedArray(myArray);
+
+Show2DArray(myArray);
