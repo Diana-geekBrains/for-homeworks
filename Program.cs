@@ -1016,17 +1016,17 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-// int SumNumbersMtoN(int m, int n)
+// int Sum(int m, int n)
 // {
 //     if(m != n)
 //     {
 //         if(m <= n)
 //         {
-//             return SumNumbersMtoN(m + 1, n) + m;
+//             return Sum(m + 1, n) + m;
 //         }
 //         else
 //         {
-//             return SumNumbersMtoN(m, n + 1) + n;
+//             return Sum(m, n + 1) + n;
 //         }
 //     }
 //     else return m;
